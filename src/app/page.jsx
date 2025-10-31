@@ -12,45 +12,20 @@ import Dot from "@/components/Dot";
 import "./globals.css";
 
 export default function Home() {
-  const [activeColorVariant, setActiveColorVariant] = useState(mint);
   return (
     <main className="w-150 grid grid-cols-[486px_100px] grid-rows-[486px_fit]">
       <figure>
-        <Image src={activeColorVariant} alt="" />
+        <Image src={mint} alt="" />
       </figure>
       <div className="flex flex-col gap-5 justify-center">
-        <Dot
-          color="#6addcc"
-          relatedImage={mint}
-          activeColorVariant={activeColorVariant}
-          setActiveColorVariant={setActiveColorVariant}
-        />
-        <Dot
-          color="#434558"
-          relatedImage={navy}
-          activeColorVariant={activeColorVariant}
-          setActiveColorVariant={setActiveColorVariant}
-        />
-        <Dot
-          color="#b6ccda"
-          relatedImage={ocean}
-          activeColorVariant={activeColorVariant}
-          setActiveColorVariant={setActiveColorVariant}
-        />
+        <Dot color="#6addcc" relatedImage={mint} />
+        <Dot color="#434558" relatedImage={navy} />
+        <Dot color="#b6ccda" relatedImage={ocean} />
       </div>
       <div className="flex justify-evenly">
-        <Thumbnail
-          imgsrc={mint}
-          setActiveColorVariant={setActiveColorVariant}
-        />
-        <Thumbnail
-          imgsrc={navy}
-          setActiveColorVariant={setActiveColorVariant}
-        />
-        <Thumbnail
-          imgsrc={ocean}
-          setActiveColorVariant={setActiveColorVariant}
-        />
+        <Thumbnail imgsrc={mint} />
+        <Thumbnail imgsrc={navy} />
+        <Thumbnail imgsrc={ocean} />
       </div>
     </main>
   );
