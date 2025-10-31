@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 // images
+//import mint from "@/images/mint.png";
 import mint from "@/images/mint.png";
 import navy from "@/images/navy.png";
 import ocean from "@/images/ocean.png";
@@ -12,20 +13,36 @@ import Dot from "@/components/Dot";
 import "./globals.css";
 
 export default function Home() {
+  const [activeWatchImage, setActiveWatchImage] = useState(mint);
   return (
-    <main className="w-150 grid grid-cols-[486px_100px] grid-rows-[486px_fit]">
+    <main className="w-fit grid grid-cols-[486px_40px] grid-rows-[486px_fit]">
       <figure>
-        <Image src={mint} alt="" />
+        <Image src={activeWatchImage} alt="" />
       </figure>
       <div className="flex flex-col gap-5 justify-center">
-        <Dot color="#6addcc" relatedImage={mint} />
-        <Dot color="#434558" relatedImage={navy} />
-        <Dot color="#b6ccda" relatedImage={ocean} />
+        <Dot
+          color="mint"
+          relatedImage={mint}
+          activeWatchImage={activeWatchImage}
+          setActiveWatchImage={setActiveWatchImage}
+        />
+        <Dot
+          color="navy"
+          relatedImage={navy}
+          activeWatchImage={activeWatchImage}
+          setActiveWatchImage={setActiveWatchImage}
+        />
+        <Dot
+          color="ocean"
+          relatedImage={ocean}
+          activeWatchImage={activeWatchImage}
+          setActiveWatchImage={setActiveWatchImage}
+        />
       </div>
       <div className="flex justify-evenly">
-        <Thumbnail imgsrc={mint} />
-        <Thumbnail imgsrc={navy} />
-        <Thumbnail imgsrc={ocean} />
+        <Thumbnail imgsrc={mint} setActiveWatchImage={setActiveWatchImage} />
+        <Thumbnail imgsrc={navy} setActiveWatchImage={setActiveWatchImage} />
+        <Thumbnail imgsrc={ocean} setActiveWatchImage={setActiveWatchImage} />
       </div>
     </main>
   );
