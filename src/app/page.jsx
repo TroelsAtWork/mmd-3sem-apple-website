@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 // images
+//import mint from "@/images/mint.png";
 import mint from "@/images/mint.png";
 import navy from "@/images/navy.png";
 import ocean from "@/images/ocean.png";
@@ -12,45 +13,36 @@ import Dot from "@/components/Dot";
 import "./globals.css";
 
 export default function Home() {
-  const [activeColorVariant, setActiveColorVariant] = useState(mint);
+  const [activeWatchImage, setActiveWatchImage] = useState(mint);
   return (
-    <main className="w-150 grid grid-cols-[486px_100px] grid-rows-[486px_fit]">
+    <main className="w-fit grid grid-cols-[486px_40px] grid-rows-[486px_fit]">
       <figure>
-        <Image src={activeColorVariant} alt="" />
+        <Image src={activeWatchImage} alt="" />
       </figure>
       <div className="flex flex-col gap-5 justify-center">
         <Dot
-          color="#6addcc"
+          color="mint"
           relatedImage={mint}
-          activeColorVariant={activeColorVariant}
-          setActiveColorVariant={setActiveColorVariant}
+          activeWatchImage={activeWatchImage}
+          setActiveWatchImage={setActiveWatchImage}
         />
         <Dot
-          color="#434558"
+          color="navy"
           relatedImage={navy}
-          activeColorVariant={activeColorVariant}
-          setActiveColorVariant={setActiveColorVariant}
+          activeWatchImage={activeWatchImage}
+          setActiveWatchImage={setActiveWatchImage}
         />
         <Dot
-          color="#b6ccda"
+          color="ocean"
           relatedImage={ocean}
-          activeColorVariant={activeColorVariant}
-          setActiveColorVariant={setActiveColorVariant}
+          activeWatchImage={activeWatchImage}
+          setActiveWatchImage={setActiveWatchImage}
         />
       </div>
       <div className="flex justify-evenly">
-        <Thumbnail
-          imgsrc={mint}
-          setActiveColorVariant={setActiveColorVariant}
-        />
-        <Thumbnail
-          imgsrc={navy}
-          setActiveColorVariant={setActiveColorVariant}
-        />
-        <Thumbnail
-          imgsrc={ocean}
-          setActiveColorVariant={setActiveColorVariant}
-        />
+        <Thumbnail imgsrc={mint} setActiveWatchImage={setActiveWatchImage} />
+        <Thumbnail imgsrc={navy} setActiveWatchImage={setActiveWatchImage} />
+        <Thumbnail imgsrc={ocean} setActiveWatchImage={setActiveWatchImage} />
       </div>
     </main>
   );

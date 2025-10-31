@@ -1,9 +1,14 @@
 import Image from "next/image";
 
-const Figure = ({ imgsrc, setActiveColorVariant }) => {
+const Figure = ({ imgsrc, setActiveWatchImage }) => {
   return (
-    <figure onClick={() => setActiveColorVariant(imgsrc)}>
-      <Image src={imgsrc} alt="" className="w-35 cursor-pointer" />
+    <figure>
+      <Image
+        onClick={() => setActiveWatchImage(imgsrc)}
+        src={imgsrc}
+        alt=""
+        className="w-35 cursor-pointer"
+      />
     </figure>
   );
 };
