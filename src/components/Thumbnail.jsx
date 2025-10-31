@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const Figure = ({ imgsrc, setActiveColorVariant }) => {
+const Figure = ({ imgsrc }) => {
   return (
-    <figure onClick={() => setActiveColorVariant(imgsrc)}>
+    <figure>
       <Image src={imgsrc} alt="" className="w-35 cursor-pointer" />
     </figure>
   );
