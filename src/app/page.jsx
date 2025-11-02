@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 // components
 import Thumbnail from "@/components/Thumbnail";
