@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-// components
 import Thumbnail from "@/components/Thumbnail";
 import Dot from "@/components/Dot";
 // css
