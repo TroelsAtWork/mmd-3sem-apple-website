@@ -1,13 +1,14 @@
 import Image from "next/image";
 
-const Figure = ({ imgsrc }) => {
+const Figure = ({ img, setActiveWatchImage }) => {
   return (
     <figure>
       <Image
-        src={imgsrc}
-        alt=""
-        width="500"
-        height="500"
+        onClick={() => setActiveWatchImage(img)}
+        src={img}
+        alt="iWatch"
+        width={500}
+        height={500}
         className="w-35 cursor-pointer"
       />
     </figure>

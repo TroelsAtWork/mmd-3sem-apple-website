@@ -1,11 +1,20 @@
 "use client";
 import "../app/globals.css";
 
-const Dot = ({ color }) => {
+const Dot = ({
+  color,
+  activeWatchImage,
+  setActiveWatchImage,
+  relatedImage,
+}) => {
   return (
     <div
-      style={{ backgroundColor: color }}
-      className={`cursor-pointer w-10 h-10 rounded-full`}
+      onClick={() => setActiveWatchImage(relatedImage)} 
+      style={{ backgroundColor: `var(--${color})` }}
+      // className="cursor-pointer w-10 h-10 rounded-full"
+      className={`cursor-pointer w-10 h-10 rounded-full ${
+        activeWatchImage === relatedImage ? "border-3" : ""
+      }`}
     ></div>
   );
 };

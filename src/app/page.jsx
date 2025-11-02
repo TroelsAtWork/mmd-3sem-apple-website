@@ -6,20 +6,36 @@ import Dot from "@/components/Dot";
 import "./globals.css";
 
 export default function Home() {
+  const [activeWatchImage, setActiveWatchImage] = useState("/mint.png");
   return (
-    <main className="w-150 grid grid-cols-[486px_100px] grid-rows-[486px_fit]">
+    <main className="w-fit grid grid-cols-[486px_40px] grid-rows-[486px_fit]">
       <figure>
-        <Image src="/mint.png" alt="" width={500} height={500} />
+        <Image src={activeWatchImage} alt="iWatch" width={500} height={500} />
       </figure>
       <div className="flex flex-col gap-5 justify-center">
-        <Dot color="#6addcc" relatedImage="/mint.png" />
-        <Dot color="#434558" relatedImage="/navy.png" />
-        <Dot color="#b6ccda" relatedImage="/ocean.png" />
+        <Dot
+          color="mint"
+          relatedImage="/mint.png"
+          activeWatchImage={activeWatchImage}
+          setActiveWatchImage={setActiveWatchImage}
+        />
+        <Dot
+          color="navy"
+          relatedImage="/navy.png"
+          activeWatchImage={activeWatchImage}
+          setActiveWatchImage={setActiveWatchImage}
+        />
+        <Dot
+          color="ocean"
+          relatedImage="/ocean.png"
+          activeWatchImage={activeWatchImage}
+          setActiveWatchImage={setActiveWatchImage}
+        />
       </div>
       <div className="flex justify-evenly">
-        <Thumbnail imgsrc="/mint.png" />
-        <Thumbnail imgsrc="/navy.png" />
-        <Thumbnail imgsrc="/ocean.png" />
+        <Thumbnail img="/mint.png" setActiveWatchImage={setActiveWatchImage} />
+        <Thumbnail img="/navy.png" setActiveWatchImage={setActiveWatchImage} />
+        <Thumbnail img="/ocean.png" setActiveWatchImage={setActiveWatchImage} />
       </div>
     </main>
   );
