@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import Thumbnail from "@/components/Thumbnail";
 import Dot from "@/components/Dot";
