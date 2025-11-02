@@ -2,10 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 // images
-//import mint from "@/images/mint.png";
-import mint from "@/images/mint.png";
-import navy from "@/images/navy.png";
-import ocean from "@/images/ocean.png";
+import mint from "/public/mint.png";
+import navy from "/public/navy.png";
+import ocean from "/public/ocean.png";
 // components
 import Thumbnail from "@/components/Thumbnail";
 import Dot from "@/components/Dot";
