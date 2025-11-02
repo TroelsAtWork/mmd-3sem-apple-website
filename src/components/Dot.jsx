@@ -10,8 +10,7 @@ const Dot = ({
   return (
     <div
       onClick={() => setActiveWatchImage(relatedImage)}
-      style={{ backgroundColor: `${ color }` }}
-      // className="cursor-pointer w-10 h-10 rounded-full"
+      style={{ backgroundColor: color }}
       className={`cursor-pointer w-10 h-10 rounded-full ${
         activeWatchImage === relatedImage ? "border-3" : ""
       }`}
