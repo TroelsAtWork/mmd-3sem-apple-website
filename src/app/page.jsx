@@ -1,10 +1,5 @@
 "use client";
 import Image from "next/image";
-// images
-// import mint from "/public/mint.png";
-// import navy from "/public/navy.png";
-// import ocean from "/public/ocean.png";
-// components
 import Thumbnail from "@/components/Thumbnail";
 import Dot from "@/components/Dot";
 // css
