@@ -1,10 +1,9 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 // images
-import mint from "@/images/mint.png";
-import navy from "@/images/navy.png";
-import ocean from "@/images/ocean.png";
+import mint from "/public/mint.png";
+import navy from "/public/navy.png";
+import ocean from "/public/ocean.png";
 // components
 import Thumbnail from "@/components/Thumbnail";
 import Dot from "@/components/Dot";
@@ -15,7 +14,7 @@ export default function Home() {
   return (
     <main className="w-150 grid grid-cols-[486px_100px] grid-rows-[486px_fit]">
       <figure>
-        <Image src={mint} alt="" />
+        <Image src={mint} alt="" width={500} height={500} />
       </figure>
       <div className="flex flex-col gap-5 justify-center">
         <Dot color="#6addcc" relatedImage={mint} />
